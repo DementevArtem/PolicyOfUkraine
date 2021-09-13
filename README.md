@@ -1,2 +1,3 @@
 # PolicyOfUkraine
-(screenshots/mainmenu.png "Описание будет тут")
+
+![DBschema](/screenshots/mainMenu.png)
