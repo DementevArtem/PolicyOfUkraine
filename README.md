@@ -1,2 +1,2 @@
 # PolicyOfUkraine
-![alt text](screenshots/mainmenu.png "Описание будет тут")
+(screenshots/mainmenu.png "Описание будет тут")
