@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CCC5C4F6-EB3E-4F57-9069-C51D56E36657}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DIPLOM</RootNamespace>
+    <AssemblyName>DIPLOM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.9.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
+    <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel">
+      <HintPath>..\..\..\..\Bunifu UI WinForms 1.5.7.1\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=1.5.5.2, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\..\Bunifu UI WinForms 1.5.7.1\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox, Version=1.5.5.2, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="BunifuDataViz, Version=1.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BunifuDataViz.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\MAP.cs" />
+    <Compile Include="Classes\OFFENDER.cs" />
+    <Compile Include="Classes\OPERATION.cs" />
+    <Compile Include="Classes\PROFIL.cs" />
+    <Compile Include="Classes\PUNISHMENT.cs" />
+    <Compile Include="Classes\VIOLATION.cs" />
+    <Compile Include="Conection\ServerConection.cs" />
+    <Compile Include="Conection\ServerConnectionPolice.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Map.Designer.cs">
+      <DependentUpon>Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuProgrammUKR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuProgrammUKR.Designer.cs">
+      <DependentUpon>MenuProgrammUKR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProfil.Designer.cs">
+      <DependentUpon>MyProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowOffender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowOffender.Designer.cs">
+      <DependentUpon>ShowOffender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowOperation.Designer.cs">
+      <DependentUpon>ShowOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowPunishment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowPunishment.Designer.cs">
+      <DependentUpon>ShowPunishment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowReport.Designer.cs">
+      <DependentUpon>ShowReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowViolattion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowViolattion.Designer.cs">
+      <DependentUpon>ShowViolattion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WriteReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WriteReport.Designer.cs">
+      <DependentUpon>WriteReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WriteReport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WriteReport2.Designer.cs">
+      <DependentUpon>WriteReport2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Map.resx">
+      <DependentUpon>Map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuProgrammUKR.resx">
+      <DependentUpon>MenuProgrammUKR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyProfil.resx">
+      <DependentUpon>MyProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowOffender.resx">
+      <DependentUpon>ShowOffender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowOperation.resx">
+      <DependentUpon>ShowOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowPunishment.resx">
+      <DependentUpon>ShowPunishment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowReport.resx">
+      <DependentUpon>ShowReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowViolattion.resx">
+      <DependentUpon>ShowViolattion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WriteReport.resx">
+      <DependentUpon>WriteReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WriteReport2.resx">
+      <DependentUpon>WriteReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowdown_106427.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\police-cap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pinboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mugshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\policeman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\court.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prisoner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mugshot%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\07306011.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\073060111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Radoyiu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suspect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suspect%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cherkasi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chernigov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chernivchi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dnipro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Donetck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Donetsck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Harkiv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Herson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hmelnit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jitomir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kirovograd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Krim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kyiv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lugansck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lutsk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lviv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nicalaev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Odesa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Poltava.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rivne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ternopil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vinnica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yjgprod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zaporiza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\320px-Ukrainian_police_shoulder_mark_03.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\court1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\court%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel%281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
